@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>demo</title>
+    <style type="text/css">
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            margin: 500px;
+            background: url('images/team-bg.jpg') no-repeat center/cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="jquery-1.12.4.js"></script>
+    <script src="fouceMouse.js"></script>
+    <script>
+        $(function(){
+
+            //传入一个json数据，包含9个方向的图片。
+            var data = [
+                {
+                    lt:"images/team-bg.jpg",
+                    t :"images/partners-bg.jpg",
+                    rt:"images/info-about-value1.jpg",
+                    r :"images/info-about-value2.jpg",
+                    rb:"images/info-about-value3.jpg",
+                    b :"images/mission.png",
+                    lb:"images/video.png",
+                    l:"images/map.jpg",
+                    center:"images/link_us.jpg",
+                }
+            ]
+
+            $(".box").fouceMouse({
+                data:data,
+            });
+        })
+    </script>
+</body>
+</html>
